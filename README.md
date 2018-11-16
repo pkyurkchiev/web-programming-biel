@@ -13,5 +13,6 @@ This repository is part of the web programming course for Business Informatics w
 
 
 #
-### Guide
-* NuGet Package Manager Console - [Link](https://github.com/pkyurkchiev/web-programming-biel/tree/master/documentations/nuget-console.md)
+### NuGet Package Manager Console Guide
+
+[Link](https://github.com/pkyurkchiev/distributed-applications/tree/master/documentations/doc_2_nuget-console.md)
