@@ -8,5 +8,5 @@ This repository is part of the web programming course for Business Informatics w
 
 
 # 
-### Precentation
+### Presentation
 * Introduction to the course - [Link](https://github.com/pkyurkchiev/web-programming-biel/blob/master/presentations/Introduction.pdf)
