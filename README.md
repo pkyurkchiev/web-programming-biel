@@ -9,4 +9,4 @@ This repository is part of the web programming course for Business Informatics w
 
 # 
 ### Precentation
-* Introduction to the course - [Link](https://github.com/pkyurkchiev/n-tier-skeleton-.net/blob/master/presentations/Introduction.pdf)
+* Introduction to the course - [Link](https://github.com/pkyurkchiev/web-programming-biel/blob/master/presentations/Introduction.pdf)
