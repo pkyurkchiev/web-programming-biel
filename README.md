@@ -16,3 +16,10 @@ This repository is part of the web programming course for Business Informatics w
 ### NuGet Package Manager Console Guide
 
 [Link](https://github.com/pkyurkchiev/web-programming-biel/tree/master/documentations/nuget-console.md)
+
+
+#
+### Day Schedule
+
+* Day one - [exercises](https://github.com/pkyurkchiev/web-programing/tree/master/exercises/day_1/TaskManager)
+* Day two - [exercises](https://github.com/pkyurkchiev/web-programing/tree/master/exercises/day_2/TaskManager)
