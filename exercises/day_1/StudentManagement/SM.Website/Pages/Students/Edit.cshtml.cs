@@ -22,6 +22,7 @@ namespace SM.Website.Pages.Students
 
         [BindProperty]
         public Student Student { get; set; }
+        public SelectList Specialtys { get; set; }
 
         public async Task<IActionResult> OnGetAsync(int? id)
         {
@@ -31,6 +32,7 @@ namespace SM.Website.Pages.Students
             }
 
             Student = await _context.Students.FirstOrDefaultAsync(m => m.Id == id);
+            Specialtys = new SelectList(await _context.Specialtys.ToListAsync(), "Id", "Name");
 
             if (Student == null)
             {
@@ -43,6 +45,7 @@ namespace SM.Website.Pages.Students
         {
             if (!ModelState.IsValid)
             {
+                Specialtys = new SelectList(await _context.Specialtys.ToListAsync(), "Id", "Name");
                 return Page();
             }
 
