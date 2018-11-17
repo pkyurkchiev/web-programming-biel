@@ -21,5 +21,5 @@ This repository is part of the web programming course for Business Informatics w
 #
 ### Day Schedule
 
-* Day one - [exercises](https://github.com/pkyurkchiev/web-programing/tree/master/exercises/day_1/TaskManager)
-* Day two - [exercises](https://github.com/pkyurkchiev/web-programing/tree/master/exercises/day_2/TaskManager)
+* Day one - [exercises](https://github.com/pkyurkchiev/web-programming-biel/tree/master/exercises/day_1/TaskManager)
+* Day two - [exercises](https://github.com/pkyurkchiev/web-programming-biel/tree/master/exercises/day_2/TaskManager)
