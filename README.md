@@ -2,20 +2,15 @@
 This repository is part of the web programming course for Business Informatics with English Language of Plovdiv University
 
 
-# 
-### Technologies and Tools
-* Microsoft ASP.NET Core Razor Page - [Link](https://docs.microsoft.com/en-us/aspnet/core/razor-pages/?view=aspnetcore-2.1&tabs=visual-studio)
+#
+### Course roadmap: [link](https://github.com/pkyurkchiev/software-modeling-and-analysis-se-pt/blob/master/documentations/roadmap-sma.mup). Source type mindmup.com
 
 
 #
-### NuGet Package Manager Console Guide
-
-[Link](https://github.com/pkyurkchiev/web-programming-biel/tree/master/documentations/nuget-console.md)
+### NuGet Package Manager Console Guide: [link](https://github.com/pkyurkchiev/web-programming-biel/tree/master/documentations/nuget-console.md)
 
 
 #
-### Day Schedule
-
-
+### Weeks Schedule
 * First week: 
   * presentations -
