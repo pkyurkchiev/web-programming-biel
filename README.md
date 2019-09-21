@@ -3,7 +3,7 @@ This repository is part of the web programming course for Business Informatics w
 
 
 #
-### Course roadmap: [link](https://github.com/pkyurkchiev/software-modeling-and-analysis-se-pt/blob/master/documentations/roadmap-sma.mup). Source type mindmup.com
+### Course roadmap: [link](https://github.com/pkyurkchiev/software-modeling-and-analysis-se-pt/blob/master/documentations/roadmap-wp.mup.png)
 
 
 #
