@@ -3,14 +3,14 @@ This repository is part of the web programming course for Business Informatics w
 
 
 #
-### Course roadmap: [link](https://github.com/pkyurkchiev/web-programming-biel/blob/master/documentations/roadmap-wp.mup.png)
+### Course roadmap: [link](https://github.com/pkyurkchiev/software-modeling-and-analysis-se/blob/master/documentations/roadmap-sma.mup.png)
 
 
 #
-### NuGet Package Manager Console Guide: [link](https://github.com/pkyurkchiev/web-programming-biel/tree/master/documentations/nuget-console.md)
+### NuGet Package Manager Console Guide : [link](https://github.com/pkyurkchiev/web-programming-biel/tree/master/documentations/nuget-console.md)
 
 
 #
-### Weeks Schedule
-* First week: 
-  * presentations -
+### Day Schedule
+
+* Day one - 
