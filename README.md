@@ -13,4 +13,4 @@ This repository is part of the web programming course for Business Informatics w
 #
 ### Day Schedule
 
-* Day one - 
+* Day one - [Web programing languages na technologies](), [Razor Syntax](), [ASP.NET Web applications]()
