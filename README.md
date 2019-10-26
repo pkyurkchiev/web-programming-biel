@@ -13,4 +13,4 @@ This repository is part of the web programming course for Business Informatics w
 #
 ### Day Schedule
 
-* Day one - [Web programing languages na technologies](), [Razor Syntax](), [ASP.NET Web applications]()
+* Day one - [Web programing languages na technologies](https://github.com/pkyurkchiev/web-programming-biel/blob/master/presentations/Lecture-01.pdf), [Razor Syntax](https://github.com/pkyurkchiev/web-programming-biel/blob/master/presentations/Lecture-02.pdf), [ASP.NET Web applications](https://github.com/pkyurkchiev/web-programming-biel/blob/master/presentations/Lecture-03.pdf)
