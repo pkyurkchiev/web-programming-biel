@@ -7,10 +7,6 @@ This repository is part of the web programming course for Business Informatics w
 
 
 #
-### NuGet Package Manager Console Guide : [link](https://github.com/pkyurkchiev/web-programming-biel/tree/master/documentations/nuget-console.md)
-
-
-#
 ### ASP.NET Core Web applications Step by step: [link](https://github.com/pkyurkchiev/web-programming-biel/tree/master/documentations/how-to-start.md)
 
 
