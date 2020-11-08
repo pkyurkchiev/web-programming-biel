@@ -2,12 +2,21 @@
 This repository is part of the web programming course for Business Informatics with English Language of Plovdiv University
 
 
+
 #
 ### Course roadmap: [link](https://github.com/pkyurkchiev/web-programming-biel/tree/master/documentations/roadmap-wp.mup.png)
 
 
+
 #
 ### ASP.NET Core Web applications Step by step: [link](https://github.com/pkyurkchiev/web-programming-biel/tree/master/documentations/how-to-start.md)
+
+
+
+## Azure Cosmos DB
+* [Download Azure Cosmos DB emulator](https://aka.ms/cosmosdb-emulator)
+* [Documentation](https://docs.microsoft.com/en-us/azure/cosmos-db/local-emulator)
+
 
 
 #
@@ -19,7 +28,7 @@ This repository is part of the web programming course for Business Informatics w
 
 * Day three - [Example - ASP.NET Core Blazor](https://github.com/pkyurkchiev/web-programming-biel/tree/master/examples/BlazorBaseProject), [Software architecture](https://github.com/pkyurkchiev/web-programming-biel/blob/master/presentations/Lecture-08.pdf), [Domain-driven design](https://github.com/pkyurkchiev/web-programming-biel/blob/master/presentations/Lecture-09.pdf)
 
-* Day four - [CQRS](https://github.com/pkyurkchiev/web-programming-biel/blob/master/presentations/Lecture-10.pdf), [Serverless architecture](https://github.com/pkyurkchiev/web-programming-biel/blob/master/presentations/Lecture-11.pdf), [Multi-model database](https://github.com/pkyurkchiev/web-programming-biel/blob/master/presentations/Lecture-12.pdf)
+* Day four - [CQRS](https://github.com/pkyurkchiev/web-programming-biel/blob/master/presentations/Lecture-10.pdf), [Serverless architecture](https://github.com/pkyurkchiev/web-programming-biel/blob/master/presentations/Lecture-11.pdf), [NOSQL database](https://github.com/pkyurkchiev/web-programming-biel/blob/master/presentations/Lecture-12.pdf),  [Multi-model database](https://github.com/pkyurkchiev/web-programming-biel/blob/master/presentations/Lecture-13.pdf)
 
 * Day five - [Exercise 1](https://github.com/pkyurkchiev/web-programming-biel/blob/master/exercises/day_1)
 
