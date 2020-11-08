@@ -2,21 +2,18 @@
 This repository is part of the web programming course for Business Informatics with English Language of Plovdiv University
 
 
-
 #
 ### Course roadmap: [link](https://github.com/pkyurkchiev/web-programming-biel/tree/master/documentations/roadmap-wp.mup.png)
-
 
 
 #
 ### ASP.NET Core Web applications Step by step: [link](https://github.com/pkyurkchiev/web-programming-biel/tree/master/documentations/how-to-start.md)
 
 
-
+#
 ## Azure Cosmos DB
 * [Download Azure Cosmos DB emulator](https://aka.ms/cosmosdb-emulator)
 * [Documentation](https://docs.microsoft.com/en-us/azure/cosmos-db/local-emulator)
-
 
 
 #
