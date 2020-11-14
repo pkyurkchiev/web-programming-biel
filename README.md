@@ -23,7 +23,7 @@ This repository is part of the web programming course for Business Informatics w
 #
 ### Course tasks
 
-* Task: [Link BG](https://github.com/pkyurkchiev/distributed-applications/blob/master/tasks/README.md)
+* Task: [Link BG](https://github.com/pkyurkchiev/web-programming-biel/blob/master/tasks/README.md)
 
 
 #
