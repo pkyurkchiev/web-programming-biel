@@ -1,0 +1,26 @@
+﻿<h3>Calculator</h3>
+
+<p>A = @A</p>
+<p>B = @B</p>
+
+<p class="alert-info">Aria = @Aria()</p>
+<p class="alert-warning">Perimeter = @Perimeter()</p>
+
+@code {
+    // double a = 5
+    // double b = 10
+    [Parameter]
+    public double A { get; set; }
+    [Parameter]
+    public double B { get; set; }
+
+    public double Aria()
+    {
+        return A * B;
+    }
+
+    public double Perimeter()
+    {
+        return A * 2 + B * 2;
+    }
+}

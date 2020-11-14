@@ -1,0 +1,18 @@
+﻿@using WOM.Models;
+
+<div>
+    <button>Delete</button>
+    @if (CurrentItem.Complete)
+    {
+    }
+    else
+    {
+        <p>@CurrentItem.Description</p>
+    }
+    <p>Created: @CurrentItem.Created</p>
+</div>
+
+@code {
+    [Parameter]
+    public WorkOut CurrentItem { get; set; }
+}

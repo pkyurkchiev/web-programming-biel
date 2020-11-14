@@ -1,0 +1,15 @@
+﻿@page "/mysecondcomponent/{Counter:int}/{Name}"
+
+<h3>MySecondRazorComponent</h3>
+
+@for (int i = 0; i < Counter; i++)
+{
+    <p>Hello @Name !</p>
+}
+
+@code {
+    [Parameter]
+    public int Counter { get; set; }
+    [Parameter]
+    public string Name { get; set; }
+}
