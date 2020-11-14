@@ -11,6 +11,10 @@ This repository is part of the web programming course for Business Informatics w
 
 
 #
+### Blazor: [link](https://docs.microsoft.com/en-us/aspnet/core/tutorials/build-a-blazor-app?view=aspnetcore-3.1)
+
+
+#
 ## Azure Cosmos DB
 * [Download Azure Cosmos DB emulator](https://aka.ms/cosmosdb-emulator)
 * [Documentation](https://docs.microsoft.com/en-us/azure/cosmos-db/local-emulator)
