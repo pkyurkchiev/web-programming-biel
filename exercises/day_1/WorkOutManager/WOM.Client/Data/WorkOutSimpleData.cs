@@ -39,7 +39,7 @@ namespace WOM.Client.Data
             throw new NotImplementedException();
         }
 
-        public async Task<IEnumerable<WorkOut>> GetAsync(bool showAll, bool byCreatedOn, bool byCompletedOn)
+        public async Task<IEnumerable<WorkOut>> GetAsync(bool showAll, bool sortByCreatedOn, bool sortByCompletedOn)
         {
             return await _client.For<WorkOut>().FindEntriesAsync();
         }

@@ -1,7 +1,7 @@
 ﻿@using WOM.Models;
 
 <div>
-    <button>Delete</button>
+    <button>Delete</button>&nbsp;
     @if (CurrentItem.Complete)
     {
     }
@@ -9,7 +9,7 @@
     {
         <p>@CurrentItem.Description</p>
     }
-    <p>Created: @CurrentItem.Created</p>
+    <p>Created on: @CurrentItem.Created</p>
 </div>
 
 @code {
