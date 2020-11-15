@@ -15,7 +15,7 @@ namespace GM.Models
         public DateTime? ExpireOn { get; set; }
         public DateTime CreatedOn { get; set; }
 
-        [Required(ErrorMessage = "Description is required.")]
+        [Required(ErrorMessage = "Name is required.")]
         public string Name { get; set; }
 
         public void MarkAsExpire()
