@@ -29,6 +29,7 @@ namespace WOM.Client
         {
             services.AddRazorPages();
             services.AddServerSideBlazor();
+            //services.AddSingleton<IWorkOutDataAccess, MockWorkOutSimpleData>();
             services.AddHttpClient<IWorkOutDataAccess, WorkOutSimpleData>();
             services.AddSingleton<WorkOutViewModel>();
         }
