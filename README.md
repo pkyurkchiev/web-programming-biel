@@ -15,9 +15,14 @@ This repository is part of the web programming course for Business Informatics w
 
 
 #
-## Azure Cosmos DB
+### Azure Cosmos DB
 * [Download Azure Cosmos DB emulator](https://aka.ms/cosmosdb-emulator)
 * [Documentation](https://docs.microsoft.com/en-us/azure/cosmos-db/local-emulator)
+
+
+#
+### Exercises documentation:
+* [Tools](https://github.com/pkyurkchiev/web-programming-biel/tree/master/documentations/tools.md)
 
 
 #
