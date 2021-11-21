@@ -26,9 +26,9 @@ This repository is part of the web programming course for Business Informatics w
 
 
 #
-### Course tasks
+### Course work
 
-* Task: [Link BG](https://github.com/pkyurkchiev/web-programming-biel/blob/master/tasks/README.md)
+* Task: [Link BG](https://github.com/pkyurkchiev/web-programming-biel/blob/master/course-work/README.md)
 
 
 #
