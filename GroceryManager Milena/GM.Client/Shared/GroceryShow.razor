@@ -1,0 +1,33 @@
+﻿@using GM.Models;
+
+<style>
+    .buttonGreen { background-color: #4CAF50; }
+    .buttonBlue { background-color: #2FB8AE; }
+    .buttonRed { background-color: #F76303; }
+</style>
+
+<div>
+    <button @onclick="RemoveItem" class ="buttonRed">Remove Item</button>&nbsp;
+    @if (CurrentItem.IsExpire)
+    {
+        <p class="alert-info">@CurrentItem.Name</p>
+        <p>Expired: @CurrentItem.DateOfExpiration</p>
+    }
+    else
+    {
+        <button @onclick="MarkAsExpired" class ="buttonRed">Expired</button>
+        <p>@CurrentItem.Name</p>
+    }
+    <p>Created on: @CurrentItem.DateOfManufactoring</p>
+</div>
+
+@code {
+    [Parameter]
+    public Grocery CurrentItem { get; set; }
+    [Parameter]
+    public Action RemoveItem { get; set; }
+    [Parameter]
+    public Action MarkAsExpired { get; set; }
+    [Parameter]
+    public Action SortByDateOfExpiration { get; set; }
+}
