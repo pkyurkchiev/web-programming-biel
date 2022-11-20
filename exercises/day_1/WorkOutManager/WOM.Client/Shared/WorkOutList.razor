@@ -10,15 +10,16 @@
 {
     <WorkOutErrors Errors="@ViewModel.Errors"></WorkOutErrors>
 }
-<p>
+<div class="row">
     <input name="newItem" type="text"
            @ref="InputBox"
            @bind-value="@ViewModel.NewDescription"
-           @bind-value:event="oninput"/>
-    <button @onclick="@(async () => await ViewModel.AddNewAsync())">
+           @bind-value:event="oninput"
+           class="form-control col-md-2" />
+    <button class="btn btn-primary" @onclick="@(async () => await ViewModel.AddNewAsync())">
         Save
     </button>
-</p>
+</div>
 
 @if (workOuts == null)
 {

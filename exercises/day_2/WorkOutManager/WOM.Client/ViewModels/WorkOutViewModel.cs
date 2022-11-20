@@ -20,7 +20,7 @@ namespace WOM.Client.ViewModels
 
         public List<string> Errors { get; } = new();
         public string newDescription = null;
-        public int asyncCount = 0;
+        private int asyncCount = 0;
         public bool Loading
         {
             get => asyncCount > 0;

@@ -15,14 +15,14 @@ namespace WOM.Client.Data
         public WorkOutSimpleData(HttpClient client)
         {
             client.BaseAddress = new Uri("http://localhost:52949/odata");
-            var settings = new ODataClientSettings(client);
+            ODataClientSettings settings = new(client);
             _client = new ODataClient(settings);
         }
 
         public async Task<WorkOut> AddAsync(WorkOut item)
         {
-            var results = new List<ValidationResult>();
-            var validation = new ValidationContext(item);
+            List<ValidationResult> results = new();
+            ValidationContext validation = new(item);
             if (Validator.TryValidateObject(item, validation, results))
             {
                 return await _client.For<WorkOut>().Set(item).InsertEntryAsync();
@@ -65,8 +65,8 @@ namespace WOM.Client.Data
 
         public async Task<WorkOut> UpdateAsync(WorkOut item)
         {
-            var results = new List<ValidationResult>();
-            var validation = new ValidationContext(item);
+            List<ValidationResult> results = new();
+            ValidationContext validation = new(item);
             if (Validator.TryValidateObject(item, validation, results))
             {
                 try

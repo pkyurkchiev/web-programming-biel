@@ -11,7 +11,7 @@ namespace WOM.Client.Data
     {
         private readonly List<WorkOut> _database = new(new WorkOut[]
 {
-            new WorkOut
+            new()
             {
                 Id = 1,
                 Complete = true,
@@ -19,7 +19,7 @@ namespace WOM.Client.Data
                 MarkedComplete = DateTime.UtcNow.AddDays(-1),
                 Created = DateTime.UtcNow.AddDays(-2)
             },
-            new WorkOut
+            new()
             {
                 Id = 2,
                 Complete = false,
@@ -73,7 +73,7 @@ namespace WOM.Client.Data
         public Task<WorkOut> AddAsync(WorkOut item)
         {
             List<ValidationResult> results = new();
-            var validation = new ValidationContext(item);
+            ValidationContext validation = new(item);
             if (Validator.TryValidateObject(item, validation, results))
             {
                 item.Id = _database.Max(WorkOut => WorkOut.Id) + 1;
