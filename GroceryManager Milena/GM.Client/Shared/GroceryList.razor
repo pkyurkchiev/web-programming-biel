@@ -1,0 +1,105 @@
+﻿
+@using GM.Models;
+@using GM.Client.ViewModels;
+
+@inject GroceryViewModel viewModel;
+
+<h2>Grocery List</h2>
+<style>
+    .buttonGreen { background-color: #4CAF50; }
+    .buttonBlue { background-color: #2FB8AE; }
+    .buttonRed { background-color: #FE3D2A; }
+</style>
+
+<p>
+    Show All Grocery (incl. expired):
+    <input type="checkbox" @bind-value="viewModel.ShowAll" />
+</p>
+<p>
+    Sort Date Of Creation:
+    <input type="checkbox" @bind-value="viewModel.SortByDateOfManufactoring" />
+</p>
+@if (viewModel.ShowAll && !viewModel.SortByDateOfManufactoring)
+{ 
+<p>
+    Sort By Date Of Expiration:
+    <input type="checkbox" @bind-value="viewModel.SortByDateOfExpiration" />
+</p>
+}
+<p>Enter new item:</p>
+@if (viewModel.ValidationErrors)
+{
+    <GroceryError Errors="@viewModel.Errors"></GroceryError>
+}
+
+<p>
+    <input name="newItem" type="text"
+           @ref="InputBox"
+           @attributes="inputAttributes"
+           @bind-value="@viewModel.NewName"
+           @bind-value:event="oninput"/>
+    <button @attributes="btnAttributes"
+            @onclick="@(async () => await viewModel.AddItemAsync())"
+            class="buttonBlue">Add Item</button>
+</p>
+
+@if (groceries == null || viewModel.Loading)
+{
+    <p class="alert alert-dark">Loading...</p>
+}
+else
+{
+    @foreach (Grocery grocery in groceries)
+    {
+        <hr />
+        <GroceryShow CurrentItem="@grocery"
+                     RemoveItem="@(async () => await viewModel.RemoveItemAsync(grocery))"
+                     MarkAsExpired="@(async () => await viewModel.MarkGroceryAsExpiredAsync(grocery))"></GroceryShow>
+    }
+}
+
+@code {
+    public ElementReference InputBox;
+    public List<Grocery> groceries;
+
+    public Dictionary<string, object> btnAttributes = new Dictionary<string, object>()
+        {
+            { "disabled", "" }
+        };
+    public Dictionary<string, object> inputAttributes = new Dictionary<string, object>() { };
+
+    private void CheckButton()
+    {
+        btnAttributes.Clear();
+        inputAttributes.Clear();
+        if (viewModel.Loading)
+        {
+            btnAttributes.Add("disabled", "");
+            inputAttributes.Add("disabled", "");
+        }
+        else if (viewModel.ValidationErrors)
+        {
+            btnAttributes.Add("disabled", "");
+            inputAttributes.Add("class", "alert-danger");
+        }
+    }
+
+    protected override async Task OnInitializedAsync()
+    {
+        groceries = (await viewModel.GroceryAsync()).ToList();
+        viewModel.PropertyChanged += async (o, e) =>
+        {
+            CheckButton();
+            if (e.PropertyName.Equals(nameof(viewModel.GroceryAsync)))
+            {
+                groceries = (await viewModel.GroceryAsync()).ToList();
+            }
+            await InvokeAsync(() =>
+            {
+                StateHasChanged();
+            });
+        };
+
+        await base.OnInitializedAsync();
+    }
+}
