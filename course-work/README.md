@@ -10,4 +10,16 @@
     *	C#, .Net Core Blazor или някой SPA Framework (Angular, React, Vue ....)
 
 4.	Допълнителна информация\
-ПОЖЕЛАНИЕ като оправна точка може да се използва проекта course-work/StartingPoint. Този проект e OData API система предоставяща възможност за работа с данни от In-Memory storage. Модела на данни е с име Grocery и включва Id, IsExpire,  ExpireOn, CreatedOn, Name.
+ПОЖЕЛАНИЕ като оправна точка може да се използва проекта course-work/StartingPoint. Този проект e OData API система предоставяща възможност за работа с данни от In-Memory storage. Модела на данни е:
+```
+public class Grocery
+{
+ public int Id { get; set; }
+ public bool IsExpire { get; set; }
+ public DateTime? ExpireOn { get; set; }
+ public DateTime CreatedOn { get; set; }
+
+ [Required(ErrorMessage = "Name is required.")]
+ public string Name { get; set; }
+}
+```
