@@ -27,13 +27,12 @@ This repository is part of the web programming course for Business Informatics w
 
 #
 ### Course work
-
-* Task: [Link BG](https://github.com/pkyurkchiev/web-programming-biel/blob/master/course-work/README.md)
+* [Task](https://github.com/pkyurkchiev/web-programming-biel/blob/master/course-work/README.md)
+* [Assessment Requirements](https://github.com/pkyurkchiev/web-programming-biel/blob/master/documentations/assessment-requirements.md)
 
 
 #
 ### Day Schedule
-
 * Day one - [Web programing languages and technologies](https://github.com/pkyurkchiev/web-programming-biel/blob/master/presentations/Lecture-01.pdf), [Razor Syntax](https://github.com/pkyurkchiev/web-programming-biel/blob/master/presentations/Lecture-02.pdf), [ASP.NET Web applications](https://github.com/pkyurkchiev/web-programming-biel/blob/master/presentations/Lecture-03.pdf)
 
 * Day two - [Single Page Application](https://github.com/pkyurkchiev/web-programming-biel/blob/master/presentations/Lecture-04.pdf), [SPA Frameworks](https://github.com/pkyurkchiev/web-programming-biel/blob/master/presentations/Lecture-05.pdf), [WebAssebly](https://github.com/pkyurkchiev/web-programming-biel/blob/master/presentations/Lecture-06.pdf), [ASP.NET Core Blazor](https://github.com/pkyurkchiev/web-programming-biel/blob/master/presentations/Lecture-07.pdf)
