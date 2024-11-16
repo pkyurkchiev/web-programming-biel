@@ -41,6 +41,6 @@ This repository is part of the web programming course for Business Informatics w
 
 * Day four - [CQRS](https://github.com/pkyurkchiev/web-programming-biel/blob/master/presentations/Lecture-10.pdf), [Serverless architecture](https://github.com/pkyurkchiev/web-programming-biel/blob/master/presentations/Lecture-11.pdf), [NoSQL database](https://github.com/pkyurkchiev/web-programming-biel/blob/master/presentations/Lecture-12.pdf),  [Multi-model database](https://github.com/pkyurkchiev/web-programming-biel/blob/master/presentations/Lecture-13.pdf)
 
-* Day five - [Exercise 1](https://github.com/pkyurkchiev/web-programming-biel/blob/master/exercises/day_1)
+* Day five - [Exercise 1](https://github.com/pkyurkchiev/web-programming-biel/blob/master/exercises/01)
 
-* Day six - [Exercise 2](https://github.com/pkyurkchiev/web-programming-biel/blob/master/exercises/day_2)
+* Day six - [Exercise 2](https://github.com/pkyurkchiev/web-programming-biel/blob/master/exercises/02)
