@@ -18,7 +18,7 @@ namespace WOM.Client.ViewModels
             _dataAccess = dataAccess;
         }
 
-        public List<string> Errors { get; } = new();
+        public List<string> Errors { get; } = [];
         public string newDescription = null;
         public string NewDescription
         {
@@ -45,7 +45,7 @@ namespace WOM.Client.ViewModels
         {
             get
             {
-                return Errors.Any();
+                return Errors.Count != 0;
             }
         }
 

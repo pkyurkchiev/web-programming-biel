@@ -12,11 +12,7 @@ namespace ToDoOperations
         public static IActionResult Run(
             [HttpTrigger(AuthorizationLevel.Anonymous, "get", Route = "items/{id}")]
                 HttpRequest req,
-            [CosmosDB(
-                databaseName: "ToDoItems",
-                collectionName: "Items",
-                ConnectionStringSetting = "CosmosDBConnection",
-                Id = "{id}", PartitionKey = "{id}")] ToDoItem toDoItem,
+            [CosmosDB(databaseName: "ToDoItems", containerName: "Items", Connection = "CosmosDBConnection", Id = "{id}", PartitionKey = "{id}")] ToDoItem toDoItem,
             ILogger log)
         {
             log.LogInformation("C# HTTP trigger function processed a request.");

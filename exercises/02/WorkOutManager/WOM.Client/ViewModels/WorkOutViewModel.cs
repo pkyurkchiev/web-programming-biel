@@ -18,7 +18,7 @@ namespace WOM.Client.ViewModels
             _dataAccess = dataAccess;
         }
 
-        public List<string> Errors { get; } = new();
+        public List<string> Errors { get; } = [];
         public string newDescription = null;
         private int asyncCount = 0;
         public bool Loading
@@ -32,7 +32,7 @@ namespace WOM.Client.ViewModels
             {
                 newDescription = value;
                 _newWorkOut.Description = value;
-                List<ValidationResult> results = new();
+                List<ValidationResult> results = [];
                 ValidationContext validation = new(_newWorkOut);
                 Errors.Clear();
                 if (!Validator.TryValidateObject(_newWorkOut, validation, results))
@@ -50,7 +50,7 @@ namespace WOM.Client.ViewModels
         {
             get
             {
-                return Errors.Any();
+                return Errors.Count != 0;
             }
         }
 

@@ -21,7 +21,7 @@ namespace WOM.Client.Data
 
         public async Task<WorkOut> AddAsync(WorkOut item)
         {
-            List<ValidationResult> results = new();
+            List<ValidationResult> results = [];
             ValidationContext validation = new(item);
             if (Validator.TryValidateObject(item, validation, results))
             {
@@ -65,7 +65,7 @@ namespace WOM.Client.Data
 
         public async Task<WorkOut> UpdateAsync(WorkOut item)
         {
-            List<ValidationResult> results = new();
+            List<ValidationResult> results = [];
             ValidationContext validation = new(item);
             if (Validator.TryValidateObject(item, validation, results))
             {

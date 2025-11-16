@@ -9,23 +9,24 @@ namespace WOM.Client.Data
 {
     public class MockWorkOutSimpleData : IWorkOutDataAccess
     {
-        private readonly List<WorkOut> _database = new(new WorkOut[]
-{
+        private readonly List<WorkOut> _database =
+        [
             new()
-            {
-                Id = 1,
-                Complete = true,
-                Description = "Biceps triceps workout",
-                MarkedComplete = DateTime.UtcNow.AddDays(-1),
-                Created = DateTime.UtcNow.AddDays(-2)
-            },
+                {
+                    Id = 1,
+                    Complete = true,
+                    Description = "Biceps triceps workout",
+                    MarkedComplete = DateTime.UtcNow.AddDays(-1),
+                    Created = DateTime.UtcNow.AddDays(-2)
+                },
             new()
             {
                 Id = 2,
                 Complete = false,
                 Description = "Back workout"
             }
-        });
+,
+        ];
 
         public Task<bool> DeleteAsync(WorkOut item)
         {
@@ -72,7 +73,7 @@ namespace WOM.Client.Data
 
         public Task<WorkOut> AddAsync(WorkOut item)
         {
-            List<ValidationResult> results = new();
+            List<ValidationResult> results = [];
             ValidationContext validation = new(item);
             if (Validator.TryValidateObject(item, validation, results))
             {
@@ -88,7 +89,7 @@ namespace WOM.Client.Data
 
         public Task<WorkOut> UpdateAsync(WorkOut item)
         {
-            List<ValidationResult> results = new();
+            List<ValidationResult> results = [];
             ValidationContext validation = new(item);
             if (Validator.TryValidateObject(item, validation, results))
             {

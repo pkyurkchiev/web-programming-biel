@@ -9,6 +9,8 @@ namespace AzureCosmosDB.DatabaseManagement
     {
         static async Task Main(string[] args)
         {
+            ArgumentNullException.ThrowIfNull(args);
+
             string databaseId = "shop-database";
             string containerId = "books";
             string connectionString = "AccountEndpoint=https://localhost:8081/;AccountKey=C2y6yDjf5/R+ob0N8A7Cgv30VRDJIWEHLM+4QDU5DE2nQ9nDuVTqobD4b8mGGyPMbIZnqyMsEcaGQy67XIw/Jw==";
@@ -29,7 +31,7 @@ namespace AzureCosmosDB.DatabaseManagement
                     Title = "Book " + bookId,
                     Price = 19.99m,
                     ISBN = "111-1111111111",
-                    Authors = new List<string> { "Author 1", "Author 2", "Author 3" },
+                    Authors = ["Author 1", "Author 2", "Author 3"],
                     PageCount = 500
                 };
 
@@ -71,14 +73,14 @@ namespace AzureCosmosDB.DatabaseManagement
 
         private static async Task QueryBookAsync(Container container, string isbn)
         {
-            var sqlQueryText = $"SELECT * FROM c WHERE c.ISBN = {isbn}";
+            var sqlQueryText = $"SELECT * FROM c WHERE c.IBSN = {isbn}";
 
             Console.WriteLine("Running query: {0}\n", sqlQueryText);
 
             QueryDefinition queryDefinition = new(sqlQueryText);
             using FeedIterator<Book> queryResultSetIterator = container.GetItemQueryIterator<Book>(queryDefinition);
 
-            List<Book> books = new();
+            List<Book> books = [];
 
             while (queryResultSetIterator.HasMoreResults)
             {

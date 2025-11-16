@@ -1,13 +1,12 @@
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Azure.Documents.Client;
+using Microsoft.Azure.Cosmos;
 using Microsoft.Azure.WebJobs;
 using Microsoft.Azure.WebJobs.Extensions.Http;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
 using System;
 using System.IO;
-using System.Linq;
 using System.Threading.Tasks;
 
 namespace ToDoOperations
@@ -16,27 +15,28 @@ namespace ToDoOperations
     {
         [FunctionName("DocUpdateToDoItem")]
         public static async Task<IActionResult> Run(
-            [HttpTrigger(AuthorizationLevel.Anonymous, "put", Route = "items/{id}")]HttpRequest req,
-            [CosmosDB(ConnectionStringSetting = "CosmosDBConnection")]
-        DocumentClient client,
+            [HttpTrigger(AuthorizationLevel.Anonymous, "put", Route = "items/{id}")] HttpRequest req,
+            [CosmosDB(Connection = "CosmosDBConnection")] CosmosClient client,
             ILogger log, string id)
         {
+            ArgumentNullException.ThrowIfNull(log);
+
             string requestBody = await new StreamReader(req.Body).ReadToEndAsync();
             var updated = JsonConvert.DeserializeObject<UpdateToDoItem>(requestBody);
-            Uri collectionUri = UriFactory.CreateDocumentCollectionUri("ToDoItems", "Items");
-            var document = client.CreateDocumentQuery(collectionUri).Where(t => t.Id == id).AsEnumerable().FirstOrDefault();
+            var container = client.GetContainer("ToDoItems", "Items");
+            var document = await container.ReadItemAsync<ToDoItem>(id, new PartitionKey(id));
             if (document == null)
             {
                 return new NotFoundResult();
             }
 
-            document.SetPropertyValue("isCompleted", updated.IsCompleted);
+            document.Resource.IsCompleted = updated.IsCompleted;
             if (!string.IsNullOrEmpty(updated.Description))
             {
-                document.SetPropertyValue("description", updated.Description);
+                document.Resource.Description = updated.Description;
             }
 
-            await client.ReplaceDocumentAsync(document, options: new RequestOptions { PartitionKey = new Microsoft.Azure.Documents.PartitionKey(id) });
+            await container.ReplaceItemAsync(document, id);
 
             // an easier way to deserialize a Document
             ToDoItem todo2 = (dynamic)document;

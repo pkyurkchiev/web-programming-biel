@@ -15,8 +15,8 @@ namespace ToDoOperations
                 HttpRequest req,
             [CosmosDB(
                 databaseName: "ToDoItems",
-                collectionName: "Items",
-                ConnectionStringSetting = "CosmosDBConnection",
+                containerName: "Items",
+                Connection = "CosmosDBConnection",
                 SqlQuery = "SELECT top 2 * FROM c order by c._ts desc")]
                 IEnumerable<ToDoItem> toDoItems,
             ILogger log)

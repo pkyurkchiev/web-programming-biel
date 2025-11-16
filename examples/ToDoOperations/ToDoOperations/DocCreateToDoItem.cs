@@ -16,8 +16,8 @@ namespace ToDoOperations
             [HttpTrigger(AuthorizationLevel.Anonymous, "post", Route = "items")]HttpRequest req,
             [CosmosDB(
         databaseName: "ToDoItems",
-        collectionName: "Items",
-        ConnectionStringSetting = "CosmosDBConnection")]
+        containerName: "Items",
+        Connection = "CosmosDBConnection")]
     IAsyncCollector<object> todos,
             ILogger log)
         {
